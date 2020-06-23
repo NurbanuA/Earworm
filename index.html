@@ -2,6 +2,11 @@
 <head>
 <title>Earworm_Blue_V1</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/Earworm.json", {onProgress: UnityProgress});
+    </script>
 </head>
 <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
 <!-- Save for Web Slices (Earworm_Blue_V1.psd) -->
@@ -15,9 +20,11 @@
 			<img src="images/Earworm_Blue_V1_03.jpg" width="480" height="1080" alt=""></td>
 	</tr>
 	<tr>
+		 <div id="unityContainer" style="width: 1024px; height: 576px"></div>
 		<td colspan="5">
 			<img src="images/Buildbox.jpg" width="960" height="540" alt=""></td>
 	</tr>
+        <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
 	<tr>
 		<td colspan="5">
 			<img src="images/Earworm_Blue_V1_05.jpg" width="960" height="137" alt=""></td>
